@@ -90,3 +90,32 @@ footer {
   padding: 1rem;
   margin-top: 2rem;
 }
+
+body.modo-oscuro {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.modo-oscuro header {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.modo-oscuro .card {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-color: #444;
+}
+
+body.modo-oscuro .card button {
+  background-color: #444;
+}
+
+body.modo-oscuro .card button:hover {
+  background-color: #666;
+}
+
+body.modo-oscuro .carrito {
+  background-color: #1e1e1e;
+  border-color: #444;
+}
