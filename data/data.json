@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pantalón Cargo",
+    "precio": 17900,
+    "imagen": "pantaloncargo.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Gorro de Lana",
+    "precio": 3200,
+    "imagen": "gorro.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Zapatillas Urbanas",
+    "precio": 22900,
+    "imagen": "zapatillas.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Campera de Jean",
+    "precio": 25900,
+    "imagen": "campera.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Chomba Lisa",
+    "precio": 12500,
+    "imagen": "chomba.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Musculosa Deportiva",
+    "precio": 8800,
+    "imagen": "musculosa.jpg"
+  }
+]
+
