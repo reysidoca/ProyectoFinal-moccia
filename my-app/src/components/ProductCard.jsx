@@ -8,36 +8,29 @@ export default function ProductCard({ product }) {
   const price = Number(product.price ?? 0);
 
   return (
-    <article
-      style={{
-        border: "1px solid #ddd",
-        borderRadius: 12,
-        overflow: "hidden",
-        background: "#fff",
-        display: "flex",
-        flexDirection: "column"
-      }}
-    >
+    <article className="card h-100">
       {img ? (
         <img
           src={img}
           alt={title}
-          style={{ width: "100%", height: 160, objectFit: "cover" }}
+          className="card-img-top"
+          style={{ height: 180, objectFit: "cover" }}
         />
       ) : (
-        <div style={{ height: 160, background: "#f3f3f3" }} />
+        <div className="card-img-top bg-light" style={{ height: 180 }} />
       )}
 
-      <div style={{ padding: 12, display: "grid", gap: 8 }}>
-        <h3 style={{ margin: 0, fontSize: 16 }}>{title}</h3>
-        <div style={{ fontWeight: 700 }}>${price}</div>
+      <div className="card-body d-grid gap-2">
+        <h3 className="h6 mb-1">{title}</h3>
+        <div className="fw-bold">${price}</div>
+
         {"stock" in product && (
-          <small style={{ color: "#555" }}>Stock: {product.stock}</small>
+          <small className="text-muted">Stock: {product.stock}</small>
         )}
 
         <button
+          className="btn btn-primary mt-2"
           onClick={() => navigate(`/item/${product.id}`)}
-          style={{ marginTop: 6 }}
         >
           Ver detalle
         </button>
@@ -48,11 +41,12 @@ export default function ProductCard({ product }) {
 
 ProductCard.propTypes = {
   product: PropTypes.shape({
-    id:    PropTypes.string.isRequired,
+    id:    PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     name:  PropTypes.string,
     title: PropTypes.string,
     image: PropTypes.string,
     price: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     stock: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    thumbnail: PropTypes.string,
   }).isRequired
 };
