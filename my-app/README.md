@@ -1,12 +1,57 @@
-# React + Vite
+Proyecto Final – Tienda Online con React
+Introducción
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una tienda online desarrollada como trabajo final del curso de React. Permite navegar un catálogo de productos, filtrarlos por categoría, ver el detalle de cada uno y gestionarlos en un carrito de compras. El proceso de compra se completa con un formulario de checkout que genera una orden en Firebase Firestore.
 
-Currently, two official plugins are available:
+Tecnologías utilizadas:
+React con Vite
+Firebase (Firestore)
+React Router DOM
+Bootstrap
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Estructura del proyecto:
+src/components: Componentes reutilizables (Navbar, ProductCard, ItemCount, etc.).
+src/containers: Contenedores que gestionan datos y estados (ItemListContainer, ItemDetailContainer).
+src/context: Manejo del estado global del carrito (CartContext).
+src/firebase: Configuración y funciones de acceso a Firestore.
+App.jsx: Configuración de rutas y context.
+main.jsx: Punto de entrada.
 
-## Expanding the ESLint configuration
+Funcionalidades:
+Navegación SPA con React Router.
+Catálogo de productos desde Firestore y filtrado por categorías.
+Detalle de producto con selección de cantidad y control de stock.
+Carrito de compras: agregar, quitar, vaciar, mostrar total.
+Formulario de checkout con validaciones básicas.
+Generación de órdenes en Firestore, con ID autogenerado.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Cumplimiento de criterios:
+Componentes bien separados y reutilizables.
+Uso de Context API para manejar el carrito.
+Navegación SPA con rutas dinámicas.
+Manejo de estados de carga, errores y validación de formularios.
+Estilos responsivos con Bootstrap.
+
+Instrucciones para correr el proyecto.
+
+Clonar el repositorio:
+
+git clone https://github.com/reysidoca/ProyectoFinal-moccia.git
+
+
+Entrar a la carpeta my-app:
+
+cd ProyectoFinal-moccia/my-app
+
+
+Instalar dependencias:
+
+npm install
+
+
+Ejecutar en desarrollo:
+
+npm run dev
+
+
+Abrir en el navegador la URL indicada (por defecto http://localhost:5173).
